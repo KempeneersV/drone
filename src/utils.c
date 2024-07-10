@@ -33,8 +33,8 @@ void int_to_ascii(int32_t num, char *buffer) {
     buffer[i] = '\0';
 }
 
-// Function to convert a float to its character representation
-void float_to_char(float num, char *buffer) {
+// Function to convert a float to its character representation with specified decimal places
+void float_to_ascii(float num, char *buffer, int32_t decimal_places) {
     // Extract integer part
     int32_t integer_part = (int32_t)num;
 
@@ -52,10 +52,10 @@ void float_to_char(float num, char *buffer) {
     len++;
 
     // Extract fractional part
-    float fractional_part = num - integer_part;
+    float fractional_part = fabs(num - integer_part); // Use fabs to handle negative numbers correctly
 
-    // Convert fractional part to ASCII (limited precision for demonstration)
-    for (int i = 0; i < 4; i++) {
+    // Convert fractional part to ASCII
+    for (int i = 0; i < decimal_places; i++) {
         fractional_part *= 10;
         int digit = (int)fractional_part;
         buffer[len + i] = digit + '0';
@@ -63,5 +63,5 @@ void float_to_char(float num, char *buffer) {
     }
 
     // Null-terminate the string
-    buffer[len + 4] = '\0';
+    buffer[len + decimal_places] = '\0';
 }

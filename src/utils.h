@@ -12,6 +12,6 @@
  * @param buffer_size La taille du buffer.
  */
 void int_to_ascii(int32_t num, char *buffer);
-void float_to_char(float num, char *buffer);
+void float_to_ascii(float num, char *buffer, int32_t decimal_places);
 
 #endif // UTILS_H

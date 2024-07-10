@@ -12,5 +12,4 @@ CMakeFiles/flight_controller.dir/src/flight_controller.c.o: \
  /home/vm/Documents/drone/src/communication/i2c/i2c.h \
  /home/vm/Documents/drone/src/communication/serial/serial_communication.h \
  /home/vm/Documents/drone/src/config.h \
- /home/vm/Documents/drone/src/mpu6050.h \
- /home/vm/Documents/drone/src/utils.h
+ /home/vm/Documents/drone/src/mpu6050.h

@@ -3,12 +3,29 @@
 
 void MPU6050_Init(void)
 {
-    // Wake up MPU6050 and configure it
     I2C_Init();
+
+    // Start I2C communication
     I2C_Start();
     I2C_Write((MPU6050_ADDR << 1) | 0); // Write mode
-    I2C_Write(PWR_MGMT_1_ADDR); // PWR_MGMT_1 register
-    I2C_Write(0x00); // Set to zero to wake up MPU6050
+
+    // Write to PWR_MGMT_1 register to wake up MPU6050
+    I2C_Write(PWR_MGMT_1_ADDR);
+    I2C_Write(0x00);
+/*
+    // Write to GYRO_CONFIG_ADDR register to configure gyro sensitivity
+    I2C_Write(GYRO_CONFIG_ADDR);
+    I2C_Write(0x08); // Set full scale range to ±500°/sec
+
+    // Write to ACCEL_CONFIG register to configure accel sensitivity
+    I2C_Write(ACCEL_CONFIG_ADDR);
+    I2C_Write(0x10); // Set full scale range to ±8g
+
+    // Write to CONFIG register to configure low pass filter
+    I2C_Write(CONFIG);
+    I2C_Write(0x03); // Set DLPF about 43Hz
+*/
+    // Stop I2C communication
     I2C_Stop();
 }
 
@@ -43,7 +60,7 @@ void MPU6050_ReadGyro(int16_t *gyroX, int16_t *gyroY, int16_t *gyroZ)
     // Read gyro data
     I2C_Start();
     I2C_Write((MPU6050_ADDR << 1) | 0); // Write mode
-    I2C_Write(GYRO_XOUT_H); // Start with register 0x43 (GYRO_XOUT_H)
+    I2C_Write(GYRO_XOUT_H_ADDR); // Start with register 0x43
     I2C_RepeatedStart();
     I2C_Write((MPU6050_ADDR << 1) | 1); // Read mode
     
@@ -77,4 +94,24 @@ void MPU6050_ReadTemperature(int16_t *temperature)
     
     // Combine data into 16-bit signed value
     *temperature = (buffer[0] << 8) | buffer[1];
+}
+
+void MPU6050_ReadSensor(int16_t *temperature, int16_t *gyro, int16_t *acc) {
+
+    // Read data sensor
+    I2C_Start();
+    I2C_Write((MPU6050_ADDR << 1) | 0); // Write mode
+    I2C_Write(ACCEL_XOUT_H_ADDR); // Start with register 0x3B
+    I2C_RepeatedStart();
+    I2C_Write((MPU6050_ADDR << 1) | 1); // Read mode
+    
+    acc[0] = (I2C_ReadAck() << 8) | I2C_ReadAck();
+    acc[1] = (I2C_ReadAck() << 8) | I2C_ReadAck();
+    acc[2] = (I2C_ReadAck() << 8) | I2C_ReadAck();
+    *temperature = (I2C_ReadAck() << 8) | I2C_ReadAck();
+    gyro[0] = (I2C_ReadAck() << 8) | I2C_ReadAck();
+    gyro[1] = (I2C_ReadAck() << 8) | I2C_ReadAck();
+    gyro[2] = (I2C_ReadAck() << 8) | I2C_ReadNak();
+
+    I2C_Stop();
 }

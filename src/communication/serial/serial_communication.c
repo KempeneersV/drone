@@ -1,5 +1,6 @@
 #include <avr/io.h>
 #include <stdint.h>
+#include "utils.h"
 
 void USART_Init(uint16_t baud)
 {
@@ -33,4 +34,64 @@ uint8_t USART_Receive(void)
 
     // Get and return received data from buffer
     return UDR0;
+}
+
+void USART_Print_String(const char *str) {
+    while (*str) {
+        USART_Transmit(*str);
+        str++;
+    }
+}
+
+void USART_PrintLn_String(const char *str) {
+    while (*str) {
+        USART_Transmit(*str);
+        str++;
+    }
+    USART_Transmit('\r');
+    USART_Transmit('\n');
+}
+
+void USART_Print_Int(int32_t integer) {
+    int8_t i = 0;
+    char buffer[7];
+    int_to_ascii(integer, buffer);
+    while(buffer[i] != '\0') {
+        USART_Transmit(buffer[i]);
+        i++;
+    }
+}
+
+void USART_PrintLn_Int(int32_t integer) {
+    int8_t i = 0;
+    char buffer[7];
+    int_to_ascii(integer, buffer);
+    while(buffer[i] != '\0') {
+        USART_Transmit(buffer[i]);
+        i++;
+    }
+    USART_Transmit('\r');
+    USART_Transmit('\n');
+}
+
+void USART_Print_Float(float float_number, int32_t decimal_places) {
+    int8_t i = 0;
+    char buffer[41];
+    float_to_ascii(float_number, buffer, decimal_places);
+    while(buffer[i] != '\0') {
+        USART_Transmit(buffer[i]);
+        i++;
+    }
+}
+
+void USART_PrintLn_Float(float float_number, int32_t decimal_places) {
+    int8_t i = 0;
+    char buffer[41];
+    float_to_ascii(float_number, buffer, decimal_places);
+    while(buffer[i] != '\0') {
+        USART_Transmit(buffer[i]);
+        i++;
+    }
+    USART_Transmit('\r');
+    USART_Transmit('\n');
 }
