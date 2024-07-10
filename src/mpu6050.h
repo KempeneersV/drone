@@ -4,7 +4,13 @@
 #include <stdint.h>
 
 // Define MPU6050 I2C address
-#define MPU6050_ADDR 0x68
+#define MPU6050_ADDR        0x68
+
+// Define Register Map
+#define PWR_MGMT_1_ADDR     0x6B
+#define ACCEL_XOUT_H_ADDR   0x3B
+#define TEMP_OUT_H_ADDR     0x41
+#define GYRO_XOUT_H         0x43
 
 // Function prototypes
 void MPU6050_Init(void);

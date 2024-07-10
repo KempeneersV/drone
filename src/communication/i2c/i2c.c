@@ -1,6 +1,7 @@
 #include "i2c.h"
 #include <avr/io.h>
 #include <util/twi.h>
+#include "config.h"
 
 void I2C_Init(void)
 {
@@ -12,7 +13,12 @@ void I2C_Init(void)
 void I2C_Start(void)
 {
     TWCR = (1 << TWINT) | (1 << TWSTA) | (1 << TWEN); // Send START condition
-    while (!(TWCR & (1 << TWINT))); // Wait for operation to complete
+    while (!(TWCR & (1 << TWINT))); // Wait for TWINT flag set
+}
+
+void I2C_RepeatedStart(void)
+{
+    I2C_Start();
 }
 
 void I2C_Stop(void)

@@ -1,8 +1,9 @@
 #include <avr/io.h>
 #include <stdint.h>
 
-void USART_Init(uint16_t ubrr)
+void USART_Init(uint16_t baud)
 {
+    uint16_t ubrr =  F_CPU/16/baud-1;
     // Set baud rate registers
     UBRR0H = (uint8_t)(ubrr >> 8);
     UBRR0L = (uint8_t)ubrr;

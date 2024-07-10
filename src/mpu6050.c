@@ -4,9 +4,10 @@
 void MPU6050_Init(void)
 {
     // Wake up MPU6050 and configure it
+    I2C_Init();
     I2C_Start();
     I2C_Write((MPU6050_ADDR << 1) | 0); // Write mode
-    I2C_Write(0x6B); // PWR_MGMT_1 register
+    I2C_Write(PWR_MGMT_1_ADDR); // PWR_MGMT_1 register
     I2C_Write(0x00); // Set to zero to wake up MPU6050
     I2C_Stop();
 }
@@ -18,7 +19,7 @@ void MPU6050_ReadAcceleration(int16_t *accX, int16_t *accY, int16_t *accZ)
     // Read acceleration data
     I2C_Start();
     I2C_Write((MPU6050_ADDR << 1) | 0); // Write mode
-    I2C_Write(0x3B); // Start with register 0x3B (ACCEL_XOUT_H)
+    I2C_Write(ACCEL_XOUT_H_ADDR); // Start with register 0x3B (ACCEL_XOUT_H)
     I2C_RepeatedStart();
     I2C_Write((MPU6050_ADDR << 1) | 1); // Read mode
     
@@ -42,7 +43,7 @@ void MPU6050_ReadGyro(int16_t *gyroX, int16_t *gyroY, int16_t *gyroZ)
     // Read gyro data
     I2C_Start();
     I2C_Write((MPU6050_ADDR << 1) | 0); // Write mode
-    I2C_Write(0x43); // Start with register 0x43 (GYRO_XOUT_H)
+    I2C_Write(GYRO_XOUT_H); // Start with register 0x43 (GYRO_XOUT_H)
     I2C_RepeatedStart();
     I2C_Write((MPU6050_ADDR << 1) | 1); // Read mode
     
@@ -66,7 +67,7 @@ void MPU6050_ReadTemperature(int16_t *temperature)
     // Read temperature data
     I2C_Start();
     I2C_Write((MPU6050_ADDR << 1) | 0); // Write mode
-    I2C_Write(0x41); // Start with register 0x41 (TEMP_OUT_H)
+    I2C_Write(TEMP_OUT_H_ADDR); // Start with register 0x41 (TEMP_OUT_H)
     I2C_RepeatedStart();
     I2C_Write((MPU6050_ADDR << 1) | 1); // Read mode
     

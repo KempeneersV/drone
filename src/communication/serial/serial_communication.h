@@ -2,7 +2,7 @@
 #define SERIAL_COMMUNICATION_H_
 
 // Function prototypes
-void USART_Init(uint16_t ubrr);
+void USART_Init(uint16_t baud);
 void USART_Transmit(uint8_t data);
 uint8_t USART_Receive(void);
 

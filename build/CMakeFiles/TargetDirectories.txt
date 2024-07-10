@@ -1,0 +1,6 @@
+/home/vm/Documents/drone/build/CMakeFiles/flight_controller.dir
+/home/vm/Documents/drone/build/CMakeFiles/bin.dir
+/home/vm/Documents/drone/build/CMakeFiles/hex.dir
+/home/vm/Documents/drone/build/CMakeFiles/upload.dir
+/home/vm/Documents/drone/build/CMakeFiles/edit_cache.dir
+/home/vm/Documents/drone/build/CMakeFiles/rebuild_cache.dir
