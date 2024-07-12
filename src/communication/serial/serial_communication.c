@@ -54,7 +54,7 @@ void USART_PrintLn_String(const char *str) {
 
 void USART_Print_Int(int32_t integer) {
     int8_t i = 0;
-    char buffer[7];
+    char buffer[12];
     int_to_ascii(integer, buffer);
     while(buffer[i] != '\0') {
         USART_Transmit(buffer[i]);
@@ -64,7 +64,7 @@ void USART_Print_Int(int32_t integer) {
 
 void USART_PrintLn_Int(int32_t integer) {
     int8_t i = 0;
-    char buffer[7];
+    char buffer[12];
     int_to_ascii(integer, buffer);
     while(buffer[i] != '\0') {
         USART_Transmit(buffer[i]);

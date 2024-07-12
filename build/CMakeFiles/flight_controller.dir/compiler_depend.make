@@ -37,6 +37,7 @@ CMakeFiles/flight_controller.dir/src/flight_controller.c.o: /home/vm/Documents/d
   /home/vm/Documents/drone/src/communication/serial/serial_communication.h \
   /home/vm/Documents/drone/src/config.h \
   /home/vm/Documents/drone/src/mpu6050.h \
+  /home/vm/Documents/drone/src/timer.h \
   /usr/lib/avr/include/avr/common.h \
   /usr/lib/avr/include/avr/fuse.h \
   /usr/lib/avr/include/avr/io.h \
@@ -46,11 +47,8 @@ CMakeFiles/flight_controller.dir/src/flight_controller.c.o: /home/vm/Documents/d
   /usr/lib/avr/include/avr/sfr_defs.h \
   /usr/lib/avr/include/avr/version.h \
   /usr/lib/avr/include/inttypes.h \
-  /usr/lib/avr/include/math.h \
   /usr/lib/avr/include/stdint.h \
   /usr/lib/avr/include/stdio.h \
-  /usr/lib/avr/include/util/delay.h \
-  /usr/lib/avr/include/util/delay_basic.h \
   /usr/lib/gcc/avr/7.3.0/include/stdarg.h \
   /usr/lib/gcc/avr/7.3.0/include/stddef.h \
   /usr/lib/gcc/avr/7.3.0/include/stdint.h
@@ -59,6 +57,25 @@ CMakeFiles/flight_controller.dir/src/mpu6050.c.o: /home/vm/Documents/drone/src/m
   /home/vm/Documents/drone/src/communication/i2c/i2c.h \
   /home/vm/Documents/drone/src/communication/serial/serial_communication.h \
   /home/vm/Documents/drone/src/mpu6050.h \
+  /home/vm/Documents/drone/src/timer.h \
+  /usr/lib/avr/include/math.h \
+  /usr/lib/avr/include/stdint.h \
+  /usr/lib/avr/include/stdlib.h \
+  /usr/lib/gcc/avr/7.3.0/include/stddef.h \
+  /usr/lib/gcc/avr/7.3.0/include/stdint.h
+
+CMakeFiles/flight_controller.dir/src/timer.c.o: /home/vm/Documents/drone/src/timer.c \
+  /home/vm/Documents/drone/src/timer.h \
+  /usr/lib/avr/include/avr/common.h \
+  /usr/lib/avr/include/avr/fuse.h \
+  /usr/lib/avr/include/avr/interrupt.h \
+  /usr/lib/avr/include/avr/io.h \
+  /usr/lib/avr/include/avr/iom328p.h \
+  /usr/lib/avr/include/avr/lock.h \
+  /usr/lib/avr/include/avr/portpins.h \
+  /usr/lib/avr/include/avr/sfr_defs.h \
+  /usr/lib/avr/include/avr/version.h \
+  /usr/lib/avr/include/inttypes.h \
   /usr/lib/avr/include/stdint.h \
   /usr/lib/gcc/avr/7.3.0/include/stdint.h
 
@@ -69,56 +86,60 @@ CMakeFiles/flight_controller.dir/src/utils.c.o: /home/vm/Documents/drone/src/uti
 
 /home/vm/Documents/drone/src/utils.c:
 
-/home/vm/Documents/drone/src/mpu6050.c:
+/usr/lib/avr/include/avr/iom328p.h:
 
-/usr/lib/avr/include/math.h:
+/home/vm/Documents/drone/src/config.h:
 
-/usr/lib/gcc/avr/7.3.0/include/stdarg.h:
+/usr/lib/avr/include/stdint.h:
 
-/home/vm/Documents/drone/src/communication/serial/serial_communication.h:
+/usr/lib/avr/include/inttypes.h:
 
-/usr/lib/avr/include/util/twi.h:
+/home/vm/Documents/drone/src/communication/serial/serial_communication.c:
 
-/usr/lib/avr/include/util/delay.h:
+/usr/lib/avr/include/avr/io.h:
 
-/usr/lib/avr/include/avr/sfr_defs.h:
+/home/vm/Documents/drone/src/mpu6050.h:
 
-/home/vm/Documents/drone/src/communication/i2c/i2c.h:
+/usr/lib/avr/include/avr/version.h:
 
-/usr/lib/avr/include/util/delay_basic.h:
+/usr/lib/gcc/avr/7.3.0/include/stddef.h:
 
-/home/vm/Documents/drone/src/flight_controller.c:
-
-/usr/lib/avr/include/avr/portpins.h:
-
-/usr/lib/gcc/avr/7.3.0/include/stdint.h:
-
-/home/vm/Documents/drone/src/communication/i2c/i2c.c:
-
-/usr/lib/avr/include/avr/common.h:
-
-/usr/lib/avr/include/stdio.h:
+/usr/lib/avr/include/avr/lock.h:
 
 /home/vm/Documents/drone/src/utils.h:
 
 /usr/lib/avr/include/avr/fuse.h:
 
-/usr/lib/avr/include/avr/lock.h:
+/usr/lib/avr/include/stdio.h:
 
-/usr/lib/gcc/avr/7.3.0/include/stddef.h:
+/usr/lib/avr/include/avr/common.h:
 
-/usr/lib/avr/include/avr/version.h:
+/home/vm/Documents/drone/src/communication/i2c/i2c.c:
 
-/home/vm/Documents/drone/src/mpu6050.h:
+/usr/lib/avr/include/avr/portpins.h:
 
-/usr/lib/avr/include/avr/io.h:
+/home/vm/Documents/drone/src/communication/i2c/i2c.h:
 
-/home/vm/Documents/drone/src/communication/serial/serial_communication.c:
+/usr/lib/gcc/avr/7.3.0/include/stdint.h:
 
-/usr/lib/avr/include/inttypes.h:
+/home/vm/Documents/drone/src/timer.c:
 
-/home/vm/Documents/drone/src/config.h:
+/home/vm/Documents/drone/src/flight_controller.c:
 
-/usr/lib/avr/include/avr/iom328p.h:
+/usr/lib/avr/include/avr/sfr_defs.h:
 
-/usr/lib/avr/include/stdint.h:
+/usr/lib/avr/include/stdlib.h:
+
+/usr/lib/avr/include/util/twi.h:
+
+/usr/lib/avr/include/avr/interrupt.h:
+
+/home/vm/Documents/drone/src/communication/serial/serial_communication.h:
+
+/usr/lib/gcc/avr/7.3.0/include/stdarg.h:
+
+/home/vm/Documents/drone/src/timer.h:
+
+/home/vm/Documents/drone/src/mpu6050.c:
+
+/usr/lib/avr/include/math.h:

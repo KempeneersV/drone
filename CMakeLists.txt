@@ -43,6 +43,7 @@ include_directories(src src/communication src/communication/i2c src/communicatio
 set(SOURCES
     src/flight_controller.c
     src/mpu6050.c
+    src/timer.c
     src/utils.c
     src/communication/i2c/i2c.c
     src/communication/serial/serial_communication.c
@@ -52,6 +53,7 @@ set(SOURCES
 set(HEADERS
     src/config.h
     src/mpu6050.h
+    src/timer.h
     src/utils.h
     src/communication/i2c/i2c.h
     src/communication/serial/serial_communication.h

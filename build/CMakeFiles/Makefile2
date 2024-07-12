@@ -86,12 +86,12 @@ clean: CMakeFiles/upload.dir/clean
 CMakeFiles/flight_controller.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/flight_controller.dir/build.make CMakeFiles/flight_controller.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/flight_controller.dir/build.make CMakeFiles/flight_controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vm/Documents/drone/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target flight_controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vm/Documents/drone/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target flight_controller"
 .PHONY : CMakeFiles/flight_controller.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/flight_controller.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vm/Documents/drone/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vm/Documents/drone/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/flight_controller.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vm/Documents/drone/build/CMakeFiles 0
 .PHONY : CMakeFiles/flight_controller.dir/rule

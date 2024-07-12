@@ -13,6 +13,12 @@
 },
 {
   "directory": "/home/vm/Documents/drone/build",
+  "command": "avr-gcc  -I/home/vm/Documents/drone/src -I/home/vm/Documents/drone/src/communication -I/home/vm/Documents/drone/src/communication/i2c -I/home/vm/Documents/drone/src/communication/serial -g -Os -DF_CPU=16000000UL -mmcu=atmega328p -DBAUD=115200 -o CMakeFiles/flight_controller.dir/src/timer.c.o -c /home/vm/Documents/drone/src/timer.c",
+  "file": "/home/vm/Documents/drone/src/timer.c",
+  "output": "CMakeFiles/flight_controller.dir/src/timer.c.o"
+},
+{
+  "directory": "/home/vm/Documents/drone/build",
   "command": "avr-gcc  -I/home/vm/Documents/drone/src -I/home/vm/Documents/drone/src/communication -I/home/vm/Documents/drone/src/communication/i2c -I/home/vm/Documents/drone/src/communication/serial -g -Os -DF_CPU=16000000UL -mmcu=atmega328p -DBAUD=115200 -o CMakeFiles/flight_controller.dir/src/utils.c.o -c /home/vm/Documents/drone/src/utils.c",
   "file": "/home/vm/Documents/drone/src/utils.c",
   "output": "CMakeFiles/flight_controller.dir/src/utils.c.o"

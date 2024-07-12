@@ -10,6 +10,6 @@ void USART_PrintLn_String(const char *str);
 void USART_Print_Int(int32_t integer);
 void USART_PrintLn_Int(int32_t integer);
 void USART_Print_Float(float float_number, int32_t decimal_places);
-void USART_Print_FloatLn(float float_number, int32_t decimal_places);
+void USART_PrintLn_Float(float float_number, int32_t decimal_places);
 
 #endif // SERIAL_COMMUNICATION_H_

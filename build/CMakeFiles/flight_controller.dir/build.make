@@ -97,10 +97,24 @@ CMakeFiles/flight_controller.dir/src/mpu6050.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/flight_controller.dir/src/mpu6050.c.s"
 	avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vm/Documents/drone/src/mpu6050.c -o CMakeFiles/flight_controller.dir/src/mpu6050.c.s
 
+CMakeFiles/flight_controller.dir/src/timer.c.o: CMakeFiles/flight_controller.dir/flags.make
+CMakeFiles/flight_controller.dir/src/timer.c.o: /home/vm/Documents/drone/src/timer.c
+CMakeFiles/flight_controller.dir/src/timer.c.o: CMakeFiles/flight_controller.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vm/Documents/drone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/flight_controller.dir/src/timer.c.o"
+	avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/flight_controller.dir/src/timer.c.o -MF CMakeFiles/flight_controller.dir/src/timer.c.o.d -o CMakeFiles/flight_controller.dir/src/timer.c.o -c /home/vm/Documents/drone/src/timer.c
+
+CMakeFiles/flight_controller.dir/src/timer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/flight_controller.dir/src/timer.c.i"
+	avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vm/Documents/drone/src/timer.c > CMakeFiles/flight_controller.dir/src/timer.c.i
+
+CMakeFiles/flight_controller.dir/src/timer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/flight_controller.dir/src/timer.c.s"
+	avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vm/Documents/drone/src/timer.c -o CMakeFiles/flight_controller.dir/src/timer.c.s
+
 CMakeFiles/flight_controller.dir/src/utils.c.o: CMakeFiles/flight_controller.dir/flags.make
 CMakeFiles/flight_controller.dir/src/utils.c.o: /home/vm/Documents/drone/src/utils.c
 CMakeFiles/flight_controller.dir/src/utils.c.o: CMakeFiles/flight_controller.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vm/Documents/drone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/flight_controller.dir/src/utils.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vm/Documents/drone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/flight_controller.dir/src/utils.c.o"
 	avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/flight_controller.dir/src/utils.c.o -MF CMakeFiles/flight_controller.dir/src/utils.c.o.d -o CMakeFiles/flight_controller.dir/src/utils.c.o -c /home/vm/Documents/drone/src/utils.c
 
 CMakeFiles/flight_controller.dir/src/utils.c.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/flight_controller.dir/src/utils.c.s: cmake_force
 CMakeFiles/flight_controller.dir/src/communication/i2c/i2c.c.o: CMakeFiles/flight_controller.dir/flags.make
 CMakeFiles/flight_controller.dir/src/communication/i2c/i2c.c.o: /home/vm/Documents/drone/src/communication/i2c/i2c.c
 CMakeFiles/flight_controller.dir/src/communication/i2c/i2c.c.o: CMakeFiles/flight_controller.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vm/Documents/drone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/flight_controller.dir/src/communication/i2c/i2c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vm/Documents/drone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/flight_controller.dir/src/communication/i2c/i2c.c.o"
 	avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/flight_controller.dir/src/communication/i2c/i2c.c.o -MF CMakeFiles/flight_controller.dir/src/communication/i2c/i2c.c.o.d -o CMakeFiles/flight_controller.dir/src/communication/i2c/i2c.c.o -c /home/vm/Documents/drone/src/communication/i2c/i2c.c
 
 CMakeFiles/flight_controller.dir/src/communication/i2c/i2c.c.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/flight_controller.dir/src/communication/i2c/i2c.c.s: cmake_force
 CMakeFiles/flight_controller.dir/src/communication/serial/serial_communication.c.o: CMakeFiles/flight_controller.dir/flags.make
 CMakeFiles/flight_controller.dir/src/communication/serial/serial_communication.c.o: /home/vm/Documents/drone/src/communication/serial/serial_communication.c
 CMakeFiles/flight_controller.dir/src/communication/serial/serial_communication.c.o: CMakeFiles/flight_controller.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vm/Documents/drone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/flight_controller.dir/src/communication/serial/serial_communication.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vm/Documents/drone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/flight_controller.dir/src/communication/serial/serial_communication.c.o"
 	avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/flight_controller.dir/src/communication/serial/serial_communication.c.o -MF CMakeFiles/flight_controller.dir/src/communication/serial/serial_communication.c.o.d -o CMakeFiles/flight_controller.dir/src/communication/serial/serial_communication.c.o -c /home/vm/Documents/drone/src/communication/serial/serial_communication.c
 
 CMakeFiles/flight_controller.dir/src/communication/serial/serial_communication.c.i: cmake_force
@@ -143,6 +157,7 @@ CMakeFiles/flight_controller.dir/src/communication/serial/serial_communication.c
 flight_controller_OBJECTS = \
 "CMakeFiles/flight_controller.dir/src/flight_controller.c.o" \
 "CMakeFiles/flight_controller.dir/src/mpu6050.c.o" \
+"CMakeFiles/flight_controller.dir/src/timer.c.o" \
 "CMakeFiles/flight_controller.dir/src/utils.c.o" \
 "CMakeFiles/flight_controller.dir/src/communication/i2c/i2c.c.o" \
 "CMakeFiles/flight_controller.dir/src/communication/serial/serial_communication.c.o"
@@ -152,12 +167,13 @@ flight_controller_EXTERNAL_OBJECTS =
 
 flight_controller.o: CMakeFiles/flight_controller.dir/src/flight_controller.c.o
 flight_controller.o: CMakeFiles/flight_controller.dir/src/mpu6050.c.o
+flight_controller.o: CMakeFiles/flight_controller.dir/src/timer.c.o
 flight_controller.o: CMakeFiles/flight_controller.dir/src/utils.c.o
 flight_controller.o: CMakeFiles/flight_controller.dir/src/communication/i2c/i2c.c.o
 flight_controller.o: CMakeFiles/flight_controller.dir/src/communication/serial/serial_communication.c.o
 flight_controller.o: CMakeFiles/flight_controller.dir/build.make
 flight_controller.o: CMakeFiles/flight_controller.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vm/Documents/drone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable flight_controller.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vm/Documents/drone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable flight_controller.o"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/flight_controller.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

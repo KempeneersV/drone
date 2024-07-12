@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/flight_controller.dir/src/flight_controller.c.o.d"
   "CMakeFiles/flight_controller.dir/src/mpu6050.c.o"
   "CMakeFiles/flight_controller.dir/src/mpu6050.c.o.d"
+  "CMakeFiles/flight_controller.dir/src/timer.c.o"
+  "CMakeFiles/flight_controller.dir/src/timer.c.o.d"
   "CMakeFiles/flight_controller.dir/src/utils.c.o"
   "CMakeFiles/flight_controller.dir/src/utils.c.o.d"
   "flight_controller.o"

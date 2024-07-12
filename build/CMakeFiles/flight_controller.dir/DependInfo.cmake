@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/vm/Documents/drone/src/communication/serial/serial_communication.c" "CMakeFiles/flight_controller.dir/src/communication/serial/serial_communication.c.o" "gcc" "CMakeFiles/flight_controller.dir/src/communication/serial/serial_communication.c.o.d"
   "/home/vm/Documents/drone/src/flight_controller.c" "CMakeFiles/flight_controller.dir/src/flight_controller.c.o" "gcc" "CMakeFiles/flight_controller.dir/src/flight_controller.c.o.d"
   "/home/vm/Documents/drone/src/mpu6050.c" "CMakeFiles/flight_controller.dir/src/mpu6050.c.o" "gcc" "CMakeFiles/flight_controller.dir/src/mpu6050.c.o.d"
+  "/home/vm/Documents/drone/src/timer.c" "CMakeFiles/flight_controller.dir/src/timer.c.o" "gcc" "CMakeFiles/flight_controller.dir/src/timer.c.o.d"
   "/home/vm/Documents/drone/src/utils.c" "CMakeFiles/flight_controller.dir/src/utils.c.o" "gcc" "CMakeFiles/flight_controller.dir/src/utils.c.o.d"
   )
 

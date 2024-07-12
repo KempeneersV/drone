@@ -264,6 +264,30 @@ src/mpu6050.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/flight_controller.dir/build.make CMakeFiles/flight_controller.dir/src/mpu6050.c.s
 .PHONY : src/mpu6050.c.s
 
+src/timer.o: src/timer.c.o
+.PHONY : src/timer.o
+
+# target to build an object file
+src/timer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/flight_controller.dir/build.make CMakeFiles/flight_controller.dir/src/timer.c.o
+.PHONY : src/timer.c.o
+
+src/timer.i: src/timer.c.i
+.PHONY : src/timer.i
+
+# target to preprocess a source file
+src/timer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/flight_controller.dir/build.make CMakeFiles/flight_controller.dir/src/timer.c.i
+.PHONY : src/timer.c.i
+
+src/timer.s: src/timer.c.s
+.PHONY : src/timer.s
+
+# target to generate assembly for a file
+src/timer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/flight_controller.dir/build.make CMakeFiles/flight_controller.dir/src/timer.c.s
+.PHONY : src/timer.c.s
+
 src/utils.o: src/utils.c.o
 .PHONY : src/utils.o
 
@@ -312,6 +336,9 @@ help:
 	@echo "... src/mpu6050.o"
 	@echo "... src/mpu6050.i"
 	@echo "... src/mpu6050.s"
+	@echo "... src/timer.o"
+	@echo "... src/timer.i"
+	@echo "... src/timer.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"
